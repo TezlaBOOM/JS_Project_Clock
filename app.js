@@ -1,41 +1,45 @@
 const currentTime = document.querySelector("h1");
-const currentTime2 = document.querySelector("p"),
 content = document.querySelector(".content"),
 selectMenu = document.querySelectorAll("select"),
-setAlarmBtn = document.querySelector("button");
-var HRAL = document.querySelector("alrmH");
-var MIAL = document.querySelector("alrmM");
-var AMPMAL = document.querySelector("alrmAMPM");
+setAlarmBtn = document.querySelector("AlarmButt");
 
-var HRTIM = document.querySelector("timrH");
+
 
 let alarmTime, isAlarmSet,
-ringtone = new Audio("./files/ringtone.mp3");
+ringtone = new Audio("./ringtone.mp3");
 
 for (let i = 12; i > 0; i--) {
     i = i < 10 ? `0${i}` : i;
     let option = `<option value="${i}">${i}</option>`;
-    HRAL.insertAdjacentHTML("afterend", option);
+   // HRAL.insertAdjacentHTML("afterend", option);
+   selectMenu[0].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
 for (let i = 59; i >= 0; i--) {
     i = i < 10 ? `0${i}` : i;
     let option = `<option value="${i}">${i}</option>`;
-    MIAL.insertAdjacentHTML("afterend", option);
+    selectMenu[1].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
 for (let i = 2; i > 0; i--) {
     let ampm = i == 1 ? "AM" : "PM";
     let option = `<option value="${ampm}">${ampm}</option>`;
-    AMPMAL.insertAdjacentHTML("afterend", option);
+    selectMenu[2].firstElementChild.insertAdjacentHTML("afterend", option);
 }
 
 
-for (let i = 12; i > 0; i--) {
+for (let i = 11; i > -1; i--) {
     i = i < 10 ? `0${i}` : i;
     let option = `<option value="${i}">${i}</option>`;
-    HRTIM.insertAdjacentHTML("afterend", option);
+    selectMenu[3].firstElementChild.insertAdjacentHTML("afterend", option);
 }
+
+for (let i = 59; i >= 0; i--) {
+    i = i < 10 ? `0${i}` : i;
+    let option = `<option value="${i}">${i}</option>`;
+    selectMenu[4].firstElementChild.insertAdjacentHTML("afterend", option);
+}
+
 
 setInterval(() => {
     let date = new Date(),
@@ -52,7 +56,7 @@ setInterval(() => {
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
     currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
-    currentTime2.innerText = `${h}:${m}:${s} ${ampm}`;
+    
 
     if (alarmTime === `${h}:${m} ${ampm}`) {
         ringtone.play();
@@ -65,7 +69,7 @@ function setAlarm() {
         alarmTime = "";
         ringtone.pause();
         content.classList.remove("disable");
-        setAlarmBtn.innerText = "Set Alarm";
+        //setAlarmBtn.innerText = "Set Alarm";
         return isAlarmSet = false;
     }
 
@@ -76,7 +80,7 @@ function setAlarm() {
     alarmTime = time;
     isAlarmSet = true;
     content.classList.add("disable");
-    setAlarmBtn.innerText = "Clear Alarm";
+    //setAlarmBtn.innerText = "Clear Alarm";
 }
 
-setAlarmBtn.addEventListener("click", setAlarm);
+AlarmButt.addEventListener("click", setAlarm);
