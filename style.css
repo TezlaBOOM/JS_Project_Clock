@@ -78,10 +78,15 @@ body{
   border-radius: 5px;
   background: #4A98F7;
 }
+.content button{
+width: 40%;
+}
 .timer {
     align-items: center;
-
 }
 .time {
     align-items: center;
+}
+.select {
+background: #2611e6;
 }
