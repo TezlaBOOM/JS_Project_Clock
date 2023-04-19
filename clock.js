@@ -6,6 +6,8 @@ stopAlarmBtm = document.querySelector("AlarmSTButt");
 
 
 
+
+
 let alarmTime, isAlarmSet,
 ringtone = new Audio("./ringtone.mp3");
 
@@ -61,7 +63,7 @@ setInterval(() => {
     h = h < 10 ? "0" + h : h;
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
-    currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
+    //currentTime.innerText = `${h}:${m}:${s} ${ampm}`;
     
 
     if (alarmTime === `${h}:${m} ${ampm}`) {
