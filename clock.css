@@ -7,14 +7,12 @@
    font-family: "Poppins", sans-serif;
  }
  :root {
-   --primary-color: #242526;
-   --white-color: #18191a;
+   --white-color: #4d1b6e;
    --black-color: #fff;
    --red-color: #e74c3c;
  }
  body {
    display: flex;
-   min-height: 100vh;
    align-items: center;
    justify-content: center;
  }
@@ -24,6 +22,7 @@
    flex-direction: column;
    align-items: center;
    gap: 60px;
+   min-height: 45vh;
  }
  .container .clock {
    display: flex;
@@ -85,15 +84,3 @@
    width: 8px;
    background: var(--black-color);
  }
- .mode-switch {
-   padding: 10px 20px;
-   border-radius: 8px;
-   font-size: 22px;
-   font-weight: 400;
-   display: inline-block;
-   color: var(--white-color);
-   background: var(--black-color);
-   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-   cursor: pointer;
- }
-  
