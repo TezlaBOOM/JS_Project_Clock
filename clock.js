@@ -73,13 +73,8 @@ setInterval(() => {
 });
 
 function setAlarm() {
-    if (isAlarmSet) {
-        alarmTime = "";
-        ringtone.pause();
-        content.classList.remove("disable");
-        //setAlarmBtn.innerText = "Set Alarm";
-        return isAlarmSet = false;
-    }
+    
+  
 
 
     let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
@@ -92,10 +87,12 @@ function setAlarm() {
     setAlarmBtn.innerText = "Clear Alarm";
 }
 function stopAlarm(){
-ringtone.pause();
+  
+        alarmTime = "";
+        ringtone.pause();
         content.classList.remove("disable");
-        //setAlarmBtn.innerText = "Set Alarm";
-        return isAlarmSet = false;   
+        
+        return isAlarmSet = false;
 }
 
 
