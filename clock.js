@@ -65,10 +65,10 @@ setInterval(() => {
     m = m < 10 ? "0" + m : m;
     s = s < 10 ? "0" + s : s;
  
-    
-
-    if (alarmTime === `${h}:${m}${ampm}`) {
-        console.log (alarmTime);
+   
+ 
+    if (alarmTime == `${h}:${m}`) {
+        
         ringtone.play();
         ringtone.loop = true;
     }
@@ -88,24 +88,18 @@ function setAlarm() {
 function stopAlarm(){  
         alarmTime = "";
         ringtone.pause();
-        content.classList.remove("disable");             
+        content.classList.remove("disable");
+        document.getElementById("comment").value = "";             
 }
 
 function TestConsole() {  
 
-   
-    alarmTime = `${Console.value}`;;
-    console.log (x);
-    
-   alarmTime = x;
-   console.log (alarmTime);
+   x = document.getElementById("comment").value;        
+   alarmTime = x;   
    content.classList.add("disable");
 
   }
 
 AlarmButt.addEventListener("click", setAlarm);
 AlarmSTButt.addEventListener("click", stopAlarm);
-
-
-
 CommLine.addEventListener("click", TestConsole);
