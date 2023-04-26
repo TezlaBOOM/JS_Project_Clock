@@ -21,6 +21,12 @@ body{
   min-height: 100vh;
   background-image: linear-gradient(to bottom right, #2611e6, #ff05c9);
 }
+h2{
+  color:white;
+}
+p{
+  color:white;
+}
 .wrapper{
   width: 490px;
   padding: 30px 30px 38px;
@@ -67,8 +73,11 @@ body{
   height: 53px;
   border:var(--white-color) ;
   outline: none;
-  background: none;
+  color : white;
+  background: #910bc6;
+  backdrop-filter:blur(1000px); 
   font-size: 19px;
+ 
 }
 .wrapper button{
   width: 100%;
@@ -185,8 +194,8 @@ background: #2611e6;
     
 }
 .sidebarMenuInner{
-    
-    min-height: 100vh;
+  height: 800px;
+   
     margin:0;
     padding:0;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
@@ -194,10 +203,22 @@ background: #2611e6;
 .sidebarMenuInner li{   
     text-transform: uppercase;    
     padding: 20px;
+    list-style:none;
     cursor: pointer;
     border-bottom: 1px solid rgba(255, 255, 255, 0.10);
 }
-
+.sidebarMenuInner button{   
+  width: 100%;
+border: none;
+outline: none;
+color: #fff;
+cursor: pointer;
+font-size: 20px;
+padding: 12px 0;
+margin-top: 20px;
+border-radius: 5px;
+background: #4A98F7;
+}
 
 input[type="checkbox"]:checked ~ #sidebarMenu {
     transform: translateX(450px);
@@ -216,7 +237,7 @@ input[type=checkbox] {
     z-index: 99;
     height: 100%;
     width: 100%;
-    top: 22px;
+    top: 7px;
     left: 15px;
     height: 22px;
     width: 22px;

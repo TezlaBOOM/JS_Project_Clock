@@ -2,9 +2,11 @@ const currentTime2 = document.querySelector("p");
 selectMenu = document.querySelectorAll("select"),
 setTimerBtn = document.querySelector("TimerButt"),
 stopTimerBtn = document.querySelector("TimerSTButt"),
+
 ringtone = new Audio("./ringtone.mp3");
 
 var intervalId = null;
+
 let hours = 0;
 let minutes = 0;
 let seconds = 0;
@@ -63,7 +65,9 @@ seconds--;
 function stopTimer() {        
         ringtone.pause();
         currentTime2.innerText = "00:00:00";
-      }
+}
 
+
+    
 TimerButt.addEventListener("click", settime);
 TimerSTButt.addEventListener("click", stopTimer);
