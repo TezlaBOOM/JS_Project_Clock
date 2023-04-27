@@ -1,3 +1,5 @@
+
+
 const currentTime = document.querySelector("h1");
 content = document.querySelector(".content"),
 selectMenu = document.querySelectorAll("select"),
@@ -67,15 +69,16 @@ setInterval(() => {
  
    
  
-    if (alarmTime == `${h}:${m}`) {
+    if (alarmTime == `${h}:${m} ${ampm}`) {
         
         ringtone.play();
         ringtone.loop = true;
+        
     }
 });
 
 function setAlarm() {
-    let time = `${selectMenu[0].value}:${selectMenu[1].value}${selectMenu[2].value}`;
+    let time = `${selectMenu[0].value}:${selectMenu[1].value} ${selectMenu[2].value}`;
     if (time.includes("Hour") || time.includes("Minute") || time.includes("AM/PM")) {
         return alert("Please, select a valid time to set Alarm!");
     }
@@ -94,9 +97,32 @@ function stopAlarm(){
 
 function TestConsole() {  
 
-   x = document.getElementById("comment").value;        
-   alarmTime = x;   
-   content.classList.add("disable");
+    x = document.getElementById("comment").value;
+    
+    let y = "alarm";
+    let w = "timer";
+    let z = x.slice(4, 9);  
+
+    console.log(z); 
+    console.log(y); 
+    
+     if (z == y){
+     console.log("Działający if ")
+        console.log(x.substring(4, 10)); 
+    
+    
+        content.classList.add("disable");
+        console.log(x.slice(10, 18)); 
+        alarmTime = x.slice(10, 18);  
+    }else if(z == w) {
+    
+     
+    
+    }else {
+    alert("Syntax Error Check your syntax if it has errors");
+    }
+    
+   
 
   }
 
