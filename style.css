@@ -11,7 +11,7 @@
   --black-color: #fff;
   --red-color: #e74c3c;
 }
-body, .wrapper, .content{
+body, .wrapper, .content ,.Timer{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -56,6 +56,10 @@ p{
   width: 100%;
   justify-content: space-between;
 }
+.wrapper .Timer{
+  width: 100%;
+  justify-content: space-between;
+}
 .content.disable{
   cursor: no-drop;
 }
@@ -78,6 +82,19 @@ p{
   backdrop-filter:blur(1000px); 
   font-size: 19px;
  
+}
+
+.Timer.disable{
+  cursor: no-drop;
+}
+.Timer .column{
+  border-radius: 5px;
+  border: 1px solid #bfbfbf;
+  width: calc(100% / 3 - 5px);
+}
+.Timer.disable .column{
+  opacity: 0.6;
+  pointer-events: none;
 }
 .wrapper button{
   width: 100%;
