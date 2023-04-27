@@ -94,7 +94,7 @@ x = document.getElementById("comment").value;
       //  console.log(x.slice(10, 18)); 
       //  alarmTime = x.slice(10, 18);  
 
-    }if(z == w) {
+    }else if(z == w) {
     
       timer.classList.add("disable");
 

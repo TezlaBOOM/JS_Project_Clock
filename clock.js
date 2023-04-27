@@ -102,7 +102,9 @@ function TestConsole() {
     let y = "alarm";
     let w = "timer";
     let z = x.slice(4, 9);  
-    
+
+    console.log(z); 
+    console.log(y); 
     
      if (z == y){
      console.log("Działający if ")
@@ -112,12 +114,11 @@ function TestConsole() {
         content.classList.add("disable");
         console.log(x.slice(10, 18)); 
         alarmTime = x.slice(10, 18);  
-    }if(z == w) {
+    }else if(z == w) {
     
      
     
-    }
-    else {
+    }else {
     alert("Syntax Error Check your syntax if it has errors");
     }
     
