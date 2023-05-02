@@ -198,9 +198,8 @@ background: #2611e6;
 
 
 #sidebarMenu {
-    height: 783px;
-    
-    position: absolute;   
+    height: 783px;    
+    position: absolute;
     width: 350px; 
     transform: translateX(0);
     transition: transform 250ms ease-in-out;
@@ -212,13 +211,13 @@ background: #2611e6;
 }
 .sidebarMenuInner{
   height: 800px;
-   
+
     margin:0;
     padding:0;
     border-top: 1px solid rgba(255, 255, 255, 0.10);
 }
-.sidebarMenuInner li{   
-    text-transform: uppercase;    
+.sidebarMenuInner li{
+  justify-content: center;   
     padding: 20px;
     list-style:none;
     cursor: pointer;
